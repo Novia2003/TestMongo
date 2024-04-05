@@ -4,6 +4,10 @@ import org.bson.types.ObjectId;
 import org.example.model.entity.Course;
 import org.example.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.TextCriteria;
+import org.springframework.data.mongodb.core.query.TextQuery;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +18,9 @@ public class CourseService {
 
     @Autowired
     private CourseRepository courseRepository;
+
+    @Autowired
+    private MongoTemplate mongoTemplate;
 
     public void testFindCourses() {
         List<Course> courses = courseRepository.findAll();
@@ -45,5 +52,12 @@ public class CourseService {
 
     public void deleteCourse(ObjectId id) {
         courseRepository.deleteById(id);
+    }
+
+    public List<Course> searchCoursesByName(String searchTerm) {
+        TextCriteria textCriteria = TextCriteria.forDefaultLanguage().matchingAny(searchTerm);
+        TextQuery textQuery = TextQuery.queryText(textCriteria);
+        Sort sort = Sort.by(Sort.Direction.DESC, "score");
+        return mongoTemplate.find(textQuery.with(sort), Course.class);
     }
 }

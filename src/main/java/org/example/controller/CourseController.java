@@ -39,4 +39,9 @@ public class CourseController {
     public void deleteCourse(@PathVariable ObjectId id) {
         courseService.deleteCourse(id);
     }
+
+    @GetMapping("/search")
+    public List<Course> searchCoursesByName(@RequestParam("q") String searchTerm) {
+        return courseService.searchCoursesByName(searchTerm);
+    }
 }
