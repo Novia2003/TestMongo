@@ -1,11 +1,8 @@
 package org.example.service;
 
 import org.bson.types.ObjectId;
-import org.example.model.entity.Course;
-import org.example.model.entity.Education;
-import org.example.model.entity.Group;
-import org.example.model.entity.Student;
-import org.example.repository.EducationRepository;
+import org.example.model.entity.mongo.Education;
+import org.example.repository.mongo.EducationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,8 @@
 package org.example;
 
 import org.example.service.CourseService;
+import org.example.service.MigrationService;
 import org.example.service.StudentService;
-import org.example.util.DataGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -19,6 +19,12 @@ public class Application {
 
         StudentService studentService = context.getBean(StudentService.class);
         studentService.testFindStudents();
+
+        MigrationService migrationService = context.getBean(MigrationService.class);
+        migrationService.migrateCourse();
+        migrationService.migrateStudent();
+        migrationService.migrateGroup();
+        migrationService.migrateEducation();
 
 //        DataGenerator generator = context.getBean(DataGenerator.class);
 //        generator.generateGroupsAndEducations();

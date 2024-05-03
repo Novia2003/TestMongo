@@ -6,7 +6,6 @@ import org.example.config.properties.MongoClientProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 @Configuration
@@ -28,6 +27,11 @@ public class MongoConfig {
         MongoClient client = MongoClients.create(connectUri);
         return client;
     }
+
+//    @Bean
+//    public MongoDatabaseFactory customMongoDbFactory(MongoClient customMongoClient) {
+//        return new SimpleMongoClientDatabaseFactory(customMongoClient, "web");
+//    }
 
 /*    @Bean
     public MongoTemplate customMongoTemplate(MongoClient customMoongoClient, MongoClientProperties mongoClientProperties) {

@@ -1,15 +1,14 @@
 package org.example.util;
 
-import org.example.model.entity.Course;
-import org.example.model.entity.Education;
-import org.example.model.entity.Group;
-import org.example.model.entity.Student;
-import org.example.repository.CourseRepository;
-import org.example.repository.EducationRepository;
-import org.example.repository.GroupRepository;
-import org.example.repository.StudentRepository;
+import org.example.model.entity.mongo.Course;
+import org.example.model.entity.mongo.Education;
+import org.example.model.entity.mongo.Group;
+import org.example.model.entity.mongo.Student;
+import org.example.repository.mongo.CourseRepository;
+import org.example.repository.mongo.EducationRepository;
+import org.example.repository.mongo.GroupRepository;
+import org.example.repository.mongo.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

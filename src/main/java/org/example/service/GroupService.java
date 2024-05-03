@@ -1,8 +1,8 @@
 package org.example.service;
 
 import org.bson.types.ObjectId;
-import org.example.model.entity.Group;
-import org.example.repository.GroupRepository;
+import org.example.model.entity.mongo.Group;
+import org.example.repository.mongo.GroupRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

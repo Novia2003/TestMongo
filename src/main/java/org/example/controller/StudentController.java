@@ -1,7 +1,7 @@
 package org.example.controller;
 
 import org.bson.types.ObjectId;
-import org.example.model.entity.Student;
+import org.example.model.entity.mongo.Student;
 import org.example.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

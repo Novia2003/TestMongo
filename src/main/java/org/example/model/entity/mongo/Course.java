@@ -1,4 +1,4 @@
-package org.example.model.entity;
+package org.example.model.entity.mongo;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -6,8 +6,6 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.TextIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.util.List;
 
 @Getter
 @Setter
@@ -26,7 +24,7 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course{" +
+        return "JpaCourse{" +
                 "id=" + id +
                 ", name=" + name +
                 ", description=" + description +

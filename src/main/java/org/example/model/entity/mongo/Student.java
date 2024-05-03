@@ -1,4 +1,4 @@
-package org.example.model.entity;
+package org.example.model.entity.mongo;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -26,7 +26,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "JpaStudent{" +
                 "id=" + id +
                 ", firstName=" + firstName +
                 ", lastName=" + lastName +

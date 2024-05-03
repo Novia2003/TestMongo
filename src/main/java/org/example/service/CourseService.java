@@ -1,8 +1,8 @@
 package org.example.service;
 
 import org.bson.types.ObjectId;
-import org.example.model.entity.Course;
-import org.example.repository.CourseRepository;
+import org.example.model.entity.mongo.Course;
+import org.example.repository.mongo.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
